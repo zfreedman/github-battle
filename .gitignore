@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+##########  above this line has been added by github     ###############
+##########  below this line has been added by developer  ###############
+
+# distribution
+dist/
