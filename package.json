@@ -4,7 +4,8 @@
   "description": "A GitHub profile comparison application based off of Tyler Mcginnis's course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,13 @@
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
   }
 }
