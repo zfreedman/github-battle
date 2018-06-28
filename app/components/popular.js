@@ -1,5 +1,6 @@
 "use strict";
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class Popular extends React.Component {
   constructor(props) {
@@ -16,7 +17,20 @@ export default class Popular extends React.Component {
   }
 
   render() {
-    let languages = [
+    return (
+      <div>
+        <SelectLanguage
+          selectedLanguage={this.state.selectedLanguage}
+          onSelect={this.updateLanguage}
+        />
+      </div>
+    );
+  }
+}
+
+// stateless functional component
+function SelectLanguage(props) {
+  let languages = [
       "All",
       "JavaScript",
       "Ruby",
@@ -24,24 +38,27 @@ export default class Popular extends React.Component {
       "CSS",
       "Python",
     ];
-    return (
-      <div>
-        <ul className="languages">
-          {languages.map(l => {
-            return (
-              <li
-                className={
-                  l === this.state.selectedLanguage ?
-                  "languageSelected" : ""
-                }
-                key={l}
-                onClick={this.updateLanguage.bind(null, l)}>
-                {l}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
+
+  return (
+    <ul className="languages">
+    {languages.map(l => {
+      return (
+        <li
+        className={
+          l === props.selectedLanguage ?
+          "languageSelected" : ""
+        }
+        key={l}
+        onClick={props.onSelect.bind(null, l)}>
+        {l}
+        </li>
+      );
+    })}
+    </ul>
+  );
+}
+// yes this still applies propTypes to functional components
+SelectLanguage.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
 }
