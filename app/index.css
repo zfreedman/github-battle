@@ -1,6 +1,11 @@
 .app {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 150px;
 }
 
 body {
@@ -25,6 +30,26 @@ body {
 
 li {
   list-style-type: none;
+}
+
+.popular-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.popular-rank {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.space-list-items {
+  margin-bottom: 7px;
 }
 
 ul {
