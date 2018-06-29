@@ -1,6 +1,15 @@
+a {
+  text-decoration: none;
+  color: #d0021b;
+}
+
 .app {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.activeLink {
+  font-weight: bold;
 }
 
 .avatar {
@@ -10,14 +19,42 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
 
+.button {
+  color: #e6e6e6;
+  background: #0a0a0a;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  font-size: 16px;
+  margin: 10px auto;
+  padding: 7px 0;
+  text-align: center;
+  width: 200px;
+}
+
+.button:active {
+  /* transform: translateY(1px); */
+  transform: scaleX(.95);
+}
+
+.button:hover:enabled {
+  background: linear-gradient(#1a1a1a, #0a0a0a);
+  color: #fff;
+  text-decoration: none;
+}
+
+.home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .languages {
   display: flex;
   justify-content: center;
 }
-
 .languages > li {
   cursor: pointer;
   font-weight: bold;
@@ -30,6 +67,13 @@ body {
 
 li {
   list-style-type: none;
+}
+
+.nav {
+  display: flex;
+}
+.nav li {
+  margin-right: 15px;
 }
 
 .popular-item {
