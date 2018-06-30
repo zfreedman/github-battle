@@ -33,12 +33,10 @@ body {
   text-align: center;
   width: 200px;
 }
-
 .button:active {
   /* transform: translateY(1px); */
   transform: scaleX(.95);
 }
-
 .button:hover:enabled {
   background: linear-gradient(#1a1a1a, #0a0a0a);
   color: #fff;
@@ -118,6 +116,18 @@ li {
   margin: 10px;
 }
 
+.reset {
+  background: transparent;
+  border: none;
+  color: #d0021b;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.reset:hover {
+  cursor: pointer;
+}
+
 .row {
   display: flex;
   justify-content: space-around;
@@ -129,4 +139,8 @@ li {
 
 ul {
   padding: 0;
+}
+
+.username {
+
 }
