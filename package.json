@@ -4,8 +4,10 @@
   "description": "A GitHub profile comparison application based off of Tyler Mcginnis's course",
   "main": "index.js",
   "scripts": {
-    "create": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack -p",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
   },
   "repository": {
     "type": "git",
