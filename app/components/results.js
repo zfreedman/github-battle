@@ -1,8 +1,9 @@
-import React from "react";
-import queryString from "query-string";
 import {Link} from "react-router-dom";
+import queryString from "query-string";
+import React from "react";
 
 import API from "../utils/api";
+import Loading from "./loading";
 import Player from "./player";
 
 export default class Results extends React.Component {
@@ -24,7 +25,7 @@ export default class Results extends React.Component {
     let loading = this.state.loading;
 
     if (loading) {
-      return <p>Loading</p>;
+      return <Loading />
     }
 
     if (error) {

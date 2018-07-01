@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import API from "../utils/api";
+import Loading from "./loading";
 
 export default class Popular extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class Popular extends React.Component {
         />
         {
           !this.state.repos
-            ? <p>LOADING</p>
+            ? <Loading />
             : <RepoGrid repos={this.state.repos} />
         }
       </div>
