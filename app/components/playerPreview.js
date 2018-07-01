@@ -14,18 +14,11 @@ export default function PlayerPreview(props) {
           @{props.name}
         </h2>
       </div>
-      <button
-        className="reset"
-        onClick={props.onReset.bind(null, props.id)}
-      >
-        Reset
-      </button>
+      {props.children}
     </div>
   );
 }
 PlayerPreview.propTypes = {
   avatar: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  onReset: PropTypes.func.isRequired
 };

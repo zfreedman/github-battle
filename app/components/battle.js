@@ -44,9 +44,14 @@ export default class Battle extends React.Component {
               <PlayerPreview
                 avatar={player1Img}
                 name={player1Name}
-                onReset={this.handleReset}
-                id="player1"
-              />
+              >
+                <button
+                  className="reset"
+                  onClick={this.handleReset.bind(null, "player1")}
+                >
+                  Reset
+                </button>
+              </PlayerPreview>
           }
 
           {
@@ -62,9 +67,14 @@ export default class Battle extends React.Component {
               <PlayerPreview
                 avatar={player2Img}
                 name={player2Name}
-                onReset={this.handleReset}
-                id={"player2"}
-              />
+              >
+                <button
+                  className="reset"
+                  onClick={this.handleReset.bind(null, "player2")}
+                >
+                  Reset
+                </button>
+              </PlayerPreview>
           }
         </div>
 

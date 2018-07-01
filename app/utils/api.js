@@ -1,9 +1,10 @@
 import axios from "axios";
+import GitHubStuff from "../utils/github_secrets";
 
 // will need to use this is free github API access is not working
 // ...permission denied errors
-let id = "YOUR_CLIENT_ID";
-let sec = "YOUR_SECRET_ID";
+let id = GitHubStuff.id;
+let sec = GitHubStuff.secret;
 let params = "?client_id=" + id + "&client_secret=" + sec;
 
 function calculateScore(profile, repos) {

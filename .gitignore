@@ -65,3 +65,6 @@ typings/
 
 # distribution
 dist/
+
+# github access tokens
+app/utils/github_secrets.js
